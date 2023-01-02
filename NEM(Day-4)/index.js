@@ -17,6 +17,10 @@ const server=http.createServer((request,response)=>{
             }
         })
     }
+    else if(request.url==="/reports"){
+        response.setHeader("content-type","text/html");
+        response.end("<h1>sended html response</h1>");
+    }
     else{
         response.end("Invalid Url");
     }
