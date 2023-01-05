@@ -11,7 +11,7 @@ const arguments=process.argv;
 //         }
 //     })
 // }
-console.log(arguments)
+
 if(arguments[2]=="read"){
     let data;
     try{
@@ -27,4 +27,31 @@ else if(arguments[2]=="append"){
     }catch(err){
         console.log(err)
     }
+}
+else if(arguments[2]=="delete"){
+    try{
+        fs.unlinkSync(`./${arguments[3]}`);
+        console.log("file deleted")
+    }catch(err){
+        console.log(err)
+    }
+}
+else if(arguments[2]=="create"){
+    try{
+        fs.writeFileSync(`./${arguments[3]}`,'Hi');
+        console.log("file created")
+    }catch(err){
+        console.log(err)
+    }
+}
+else if(arguments[2]=="rename"){
+    try{
+        fs.renameSync(`./${arguments[3]}`,`./${arguments[4]}`);
+        console.log("file rename")
+    }catch(err){
+        console.log(err)
+    }
+}
+else{
+    console.log("command not valid");
 }
