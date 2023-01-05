@@ -11,6 +11,10 @@ else if(arguments[2]=='multi'){
     var multi = multi(arguments[3], arguments[4])
     console.log(`multplication of ${arguments[3]} and ${arguments[4]} is ${multi}`);
 }
+else if(arguments[2]=='div'){
+    var div = div(arguments[3], arguments[4])
+    console.log(`division of ${arguments[3]} and ${arguments[4]} is ${div}`);
+}
 function add(a, b) {
     // To extract number from string
     return parseInt(a)+parseInt(b) 
@@ -22,4 +26,8 @@ function sub(a, b) {
 function multi(a, b) {
     // To extract number from string
     return parseInt(a)*parseInt(b) 
-}  
+}
+function div(a, b) {
+    // To extract number from string
+    return parseInt(a)/parseInt(b) 
+}    
