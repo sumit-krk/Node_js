@@ -1,3 +1,4 @@
+const {randomInt}=require("crypto");
 function add(a, b) {
     // To extract number from string
     return parseInt(a)+parseInt(b) 
@@ -6,7 +7,6 @@ function sub(a, b) {
     // To extract number from string
     return parseInt(a)-parseInt(b) 
 }
-const {randomInt}=require("crypto");
 function multi(a, b) {
     // To extract number from string
     return parseInt(a)*parseInt(b) 
