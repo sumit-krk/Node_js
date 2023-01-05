@@ -1,3 +1,4 @@
+const {randomInt}=require("crypto");
 var arguments = process.argv
 if(arguments[2]=='add'){
     var sum = add(arguments[3], arguments[4])
@@ -15,6 +16,13 @@ else if(arguments[2]=='div'){
     var div = div(arguments[3], arguments[4])
     console.log(`division of ${arguments[3]} and ${arguments[4]} is ${div}`);
 }
+else if(arguments[2]=='random'){
+    var random=ran(arguments[3],arguments[4])
+    console.log(`random number between ${arguments[3]} and ${arguments[4]} is ${random}`);
+}
+else{
+    console.log('Invalid input');
+}
 function add(a, b) {
     // To extract number from string
     return parseInt(a)+parseInt(b) 
@@ -30,4 +38,7 @@ function multi(a, b) {
 function div(a, b) {
     // To extract number from string
     return parseInt(a)/parseInt(b) 
-}    
+}
+function ran(a,b){
+    return randomInt(parseInt(a),parseInt(b));
+}
