@@ -38,7 +38,7 @@ else if(arguments[2]=="delete"){
 }
 else if(arguments[2]=="create"){
     try{
-        fs.writeFileSync(`./${arguments[3]}`,'Hi');
+        fs.writeFileSync(`./${arguments[3]}`,'hi');
         console.log("file created")
     }catch(err){
         console.log(err)
