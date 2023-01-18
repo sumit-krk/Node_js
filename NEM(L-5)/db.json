@@ -1,0 +1,11 @@
+{
+    "name":[
+        {"name":"sumit","address":"pratappur"},
+        {"name":"Davanshu","address":"shekpura"}
+    ],
+    "Info":[
+        {"Role":"SDE-1","Salry":"200K"},
+        {"Role":"SDE-2","Salry":"300K"}
+    ]
+
+}
