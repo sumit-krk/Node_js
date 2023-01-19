@@ -1,11 +1,26 @@
 {
-    "name":[
-        {"name":"sumit","address":"pratappur"},
-        {"name":"Davanshu","address":"shekpura"}
+    "name": [
+        {
+            "name": "sumit",
+            "address": "pratappur"
+        },
+        {
+            "name": "Davanshu",
+            "address": "shekpura"
+        },
+        {
+            "name": "sumit-2",
+            "age": "26"
+        }
     ],
-    "Info":[
-        {"Role":"SDE-1","Salry":"200K"},
-        {"Role":"SDE-2","Salry":"300K"}
+    "Info": [
+        {
+            "Role": "SDE-1",
+            "Salry": "200K"
+        },
+        {
+            "Role": "SDE-2",
+            "Salry": "300K"
+        }
     ]
-
 }

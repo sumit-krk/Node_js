@@ -21,6 +21,18 @@ app.get("/getData",(req,res)=>{
     res.send("you goat data in terminal");
 })
 
+app.post("/addstudent",(req,res)=>{
+    // read the data first
+    const data=fs.readFileSync("./db.json","utf-8")
+    // parsing the data to add a new student
+    const parsed_data=JSON.parse(data);
+    //adding the new student
+    parsed_data.name.push(req.body)
+    //write in the file
+    fs.writeFileSync("./db.json",JSON.stringify(parsed_data))
+    res.send("database update");
+})
+
 app.listen(3500,()=>{
     console.log("server listing on 3500 port")
 })
