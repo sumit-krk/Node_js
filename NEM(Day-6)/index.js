@@ -1,6 +1,8 @@
 const express=require("express");
+const {TimeLogger}=require("./middlewares/timeLoggerMiddleWares")
 const app=express();
 const fs=require("fs");
+
 
 // app.use((req,res,next)=>{
 //     if(req.url=='/about'){
@@ -11,13 +13,6 @@ const fs=require("fs");
 //         res.send("Route no avilable")
 //     }
 // })
-
-const TimeLogger=(req,res,next)=>{
-    let startTime=new Date().getTime();
-    next();
-    let endTime=new Date().getTime();
-    console.log(endTime-startTime)
-}
 
 app.use(TimeLogger)
 
