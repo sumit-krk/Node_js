@@ -22,7 +22,11 @@ const server=http.createServer((request,response)=>{
         response.end("<h1>sended html response</h1>");
     }
     else{
-        response.end("Invalid Url");
+        response.writeHead(404,{
+            'Content-type':'text/html',
+            'my-own-header':'hello-world'
+        })
+        response.end("<h1>Invalid Url<h1/>");
     }
 })
 
