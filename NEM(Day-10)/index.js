@@ -18,6 +18,13 @@ app.post("/register",(req,res)=>{
 })
 
 app.listen(4000,async()=>{
-    await connection
+    try{
+        await connection
+        console.log("connected to db")
+    }
+    catch(err){
+        console.log("something went wrong")
+        console.log(err)
+    }
     console.log("listening on port 40000");
 })
