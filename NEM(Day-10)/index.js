@@ -1,4 +1,5 @@
 const express=require("express");
+const { connection } = require('./db')
 
 const app=express();
 
@@ -16,6 +17,7 @@ app.post("/register",(req,res)=>{
     res.send("registered");
 })
 
-app.listen(4000,()=>{
+app.listen(4000,async()=>{
+    await connection
     console.log("listening on port 40000");
 })
