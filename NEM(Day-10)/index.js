@@ -15,10 +15,17 @@ app.get("/",(req,res)=>{
 app.post("/login",async(req,res)=>{
     const {email,password}=req.body;
    try{
-    var token = jwt.sign({ course: 'backend' }, 'masai');
-    const user=await userModel.find({email,password})
+    const user=await userModel.find({email})
     if(user.length>0){
-        res.send({"msg":"logdin sussefully","token":token})
+        bcrypt.compare(password, user[0].password, (err, result) => {
+            if(result){
+                var token = jwt.sign({ course: 'backend' }, 'masai');
+                res.send({"msg":"logdin sussefully","token":token})
+            }
+            else{
+                console.log("Wrong crenditals");
+            }
+        });
     }else{
         res.send("No valid user");
     }
