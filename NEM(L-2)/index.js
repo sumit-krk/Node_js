@@ -15,5 +15,4 @@ const div=(a,b)=>{
 }
 
 // module.exports=[sum,sub,mul,div];
-
 module.exports={sum,sub,mul,div}; // correct way
